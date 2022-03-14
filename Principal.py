@@ -20,7 +20,7 @@ def process(env, processName, ram_memory, memory_size, time, instructions, veloc
   instructions_Ready = 0 
  
   #RUNNING
-  while instructions_Ready < instructions:
+  while instructions_Ready < instructions:#instrucciones
     with cpu.request() as req:
       yield req 
       if(instructions - instructions_Ready) >= velocity:
@@ -42,7 +42,7 @@ def process(env, processName, ram_memory, memory_size, time, instructions, veloc
         yield req_1 
         yield env.timeout(1)
 
-  yield ram_memory.put(memory_size)
+  yield ram_memory.put(memory_size)#tamano de memoria
   print("Tiempo [%s] - %s - libero %d de ram" % (time, processName, memory_size))
    
   global time_list 
