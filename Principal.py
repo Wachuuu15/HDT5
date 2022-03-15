@@ -52,7 +52,7 @@ def process(env, processName, ram_memory, memory_size, time, instructions, veloc
   
 #proceso
 velocity = 6
-process_c = 25
+process_c = 100
 time_T = 0
 time_list = []
 
@@ -82,3 +82,5 @@ for i in time_list:
   sum += (i - ((time_T / process_c))) ** 2
 print()
 print("Desviacion estandar es: " + str((sum / (process_c - 1)) ** 0.5))
+
+#Se me olvido que tenía que tener comits entonces programe de una :C
