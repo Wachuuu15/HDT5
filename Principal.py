@@ -52,7 +52,7 @@ def process(env, processName, ram_memory, memory_size, time, instructions, veloc
   
 #proceso
 velocity = 6
-process_c = 100
+process_c = 25
 time_T = 0
 time_list = []
 
@@ -61,7 +61,7 @@ ram_memory = simpy.Container(env, init=100, capacity=100)
 cpu = simpy.Resource(env, capacity=4)
 __wait__ = simpy.Resource(env, capacity=2)
 
-intevalo = 1
+intevalo = 5
 #intervalo
 for i in range(process_c):
   memory_size = random.randint(1,10)
